@@ -13,8 +13,13 @@
 <body>
 
   <div id="stage">
-    <p style="background-image: url(img/ath-queue.png)"></p>
-    <p style="background-image: url(img/ath-appointment.png)"></p>
+    <?php
+        foreach ( glob( 'images/*.*' ) as $img ) {
+            echo '<p style="background-image: url(' . $img . ')"></p>';
+        }
+    ?>
+    <!-- <p style="background-image: url(images/ath-queue.png)"></p>
+    <p style="background-image: url(images/ath-appointment.png)"></p> -->
   </div>
 
   <script src="js/app.min.js"></script>
